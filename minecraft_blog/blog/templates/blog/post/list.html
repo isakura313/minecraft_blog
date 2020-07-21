@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "blog/base.html" %}
 
-</body>
-</html>
+{% block title %} Блог об играх {% endblock %}
+
+{% block content %}
+<h1 class="is-size-5 has-text-centered title"> Блог об играх </h1>
+{% for post in posts %}
+<div class="blog_wrap">
+    <h5 class="is-size-6 has-text-centered"> {{ post.title }} </h5>
+    <p class="blog_body"> {{ post.body|truncatewords:30|linebreaks }}</p>
+    <p class="blog_time"> Опубликовано {{ post.publish }}</p>
+    <a href="{{ post.get_absolute_url }}"> Продолжить чтение </a>
+</div>
+{% endfor %}
+
+{% endblock %}
