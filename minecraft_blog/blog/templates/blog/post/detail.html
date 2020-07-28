@@ -4,6 +4,7 @@
 <h3 class="is-size-4 title has-text-centered">
     {{ post.title }}
 </h3>
+  <img src="{{ post.post_img.url }}" alt="">
 <p class="blog_body">{{ post.body|linebreaks }} </p>
-<p class="blog_time"> Опубликовано  {{ post.publish }} by {{ post.author }}</p>
+<p class="blog_time"> Опубликовано  {{ post.publish }} by  {{ post.author }}</p>
 {% endblock %}
