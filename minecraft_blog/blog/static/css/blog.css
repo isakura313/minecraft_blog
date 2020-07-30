@@ -10,3 +10,10 @@ h3, h5{
 p{
     font-family: 'Andika', sans-serif;
 }
+.promo_img{
+    height: 250px;
+    border: 2px solid black;
+}
+h5{
+ word-wrap: break-word;
+}
